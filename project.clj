@@ -13,7 +13,9 @@
                  [ring.middleware.logger "0.5.0"]
                  [compojure "1.5.0"]
                  [environ "1.0.3"]
-                 [reagent "0.6.0-rc"]]
+                 [reagent "0.6.0-rc"]
+                 [cljs-react-material-ui "0.2.22"]
+                 [reddit.clj "0.4.0"]]
 
   :plugins [[lein-cljsbuild "1.1.3"]
             [lein-environ "1.0.3"]]
@@ -44,9 +46,9 @@
                 ;; Alternatively, you can configure a function to run every time figwheel reloads.
                 ;; :figwheel {:on-jsload "sometest.core/on-figwheel-reload"}
 
-                :compiler {:main sometest.core
+                :compiler {:main sometest.layout
                            :asset-path "js/compiled/out"
-                           :output-to "resources/public/js/compiled/sometest.js"
+                           :output-to "resources/public/js/compiled/app.js"
                            :output-dir "resources/public/js/compiled/out"
                            :source-map-timestamp true}}
 

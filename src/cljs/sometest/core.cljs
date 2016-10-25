@@ -3,9 +3,9 @@
 
 (enable-console-print!)
 
-(defonce app-state (atom {:text "Hello Chestnut!"}))
+(def app-state (atom {:text "Hello Chestnut"}))
 
 (defn greeting []
   [:h1 (:text @app-state)])
 
-(reagent/render [greeting] (js/document.getElementById "app"))
+(reagent/render [greeting] (js/document.getElementById "appsi"))
